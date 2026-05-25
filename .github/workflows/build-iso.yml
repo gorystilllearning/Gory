@@ -49,14 +49,4 @@ jobs:
           path: /tmp/archiso-out/*.iso
           retention-days: 5
 
-      - name: Create Release
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        uses: softprops/action-gh-release@v1
-        with:
-          files: /tmp/archiso-out/*.iso
-          tag_name: "v${{ github.run_number }}"
-          name: "Gory Build #${{ github.run_number }}"
-          draft: false
-          prerelease: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
