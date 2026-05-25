@@ -4,6 +4,11 @@ linux
 linux-firmware
 mkinitcpio
 archiso
+grub
+syslinux
+memtest86+
+memtest86+-efi
+edk2-shell
 
 # Networking
 networkmanager

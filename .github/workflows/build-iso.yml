@@ -20,7 +20,10 @@ jobs:
       - name: Install dependencies
         run: |
           pacman -Syu --noconfirm
-          pacman -S --noconfirm archiso
+          pacman -S --noconfirm archiso grub
+          cp -r /usr/share/archiso/configs/releng/syslinux ./ || true
+          cp -r /usr/share/archiso/configs/releng/grub ./ || true
+          cp -r /usr/share/archiso/configs/releng/efiboot ./ || true
 
       - name: Build ISO
         run: |
