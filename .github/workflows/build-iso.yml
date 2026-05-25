@@ -1,4 +1,4 @@
-name: Build Wiseman Linux ISO
+name: Build Gory ISO
 
 on:
   push:
@@ -32,7 +32,7 @@ jobs:
       - name: Upload ISO as Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Wiseman-Linux-ISO
+          name: Gory-ISO
           path: /tmp/archiso-out/*.iso
           retention-days: 5
 
@@ -42,7 +42,7 @@ jobs:
         with:
           files: /tmp/archiso-out/*.iso
           tag_name: "v${{ github.run_number }}"
-          name: "Wiseman Linux Build #${{ github.run_number }}"
+          name: "Gory Build #${{ github.run_number }}"
           draft: false
           prerelease: false
         env:

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Wiseman Linux Script to install Non-Steam Launchers
+# Gory Script to install Non-Steam Launchers
 # Based on community tools
 
 echo "Installing Non-Steam Launchers into Steam via Proton..."

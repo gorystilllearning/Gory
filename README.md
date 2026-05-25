@@ -1,6 +1,6 @@
-# Wiseman Linux
+# Gory
 
-Wiseman Linux is an open-source, Arch-based Linux distribution optimized for PC gaming. Built on top of the powerful `archiso` tool, this project provides a streamlined gaming experience out-of-the-box, featuring KDE Plasma, Gamescope, and tools to seamlessly play Windows games.
+Gory is an open-source, Arch-based Linux distribution optimized for PC gaming. Built on top of the powerful `archiso` tool, this project provides a streamlined gaming experience out-of-the-box, featuring KDE Plasma, Gamescope, and tools to seamlessly play Windows games.
 
 ## Features
 
@@ -22,7 +22,7 @@ Whenever code is pushed to the `main` branch, the `.github/workflows/build-iso.y
 To build it manually on an Arch Linux host:
 ```bash
 sudo pacman -S archiso
-sudo mkarchiso -v -w /tmp/archiso-tmp -o /tmp/archiso-out /path/to/wiseman-linux
+sudo mkarchiso -v -w /tmp/archiso-tmp -o /tmp/archiso-out /path/to/gory
 ```
 
 ## License

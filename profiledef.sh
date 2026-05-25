@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2034
 
-iso_name="wiseman-linux"
-iso_label="WISEMAN_$(date +%Y%m)"
+iso_name="gory"
+iso_label="GORY_$(date +%Y%m)"
 iso_publisher="Gorywiseman <https://github.com/gorywiseman>"
-iso_application="Wiseman Linux Live/Rescue CD"
+iso_application="Gory Live/Rescue CD"
 iso_version="$(date +%Y.%m.%d)"
 install_dir="arch"
 buildmodes=('iso')
