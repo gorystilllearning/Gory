@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: |
           pacman -Syu --noconfirm
-          pacman -S --noconfirm archiso
+          pacman -S --noconfirm archiso syslinux mtools dosfstools edk2-ovmf grub
 
       - name: Build ISO
         run: |
