@@ -1,0 +1,49 @@
+name: Build Wiseman Linux ISO
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: archlinux:base-devel
+      options: --privileged
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          pacman -Syu --noconfirm
+          pacman -S --noconfirm archiso
+
+      - name: Build ISO
+        run: |
+          mkdir -p /tmp/archiso-tmp
+          mkdir -p /tmp/archiso-out
+          # Run archiso using the current directory as the profile
+          mkarchiso -v -w /tmp/archiso-tmp -o /tmp/archiso-out ./
+
+      - name: Upload ISO as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Wiseman-Linux-ISO
+          path: /tmp/archiso-out/*.iso
+          retention-days: 5
+
+      - name: Create Release
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v1
+        with:
+          files: /tmp/archiso-out/*.iso
+          tag_name: "v${{ github.run_number }}"
+          name: "Wiseman Linux Build #${{ github.run_number }}"
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

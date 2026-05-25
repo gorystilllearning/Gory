@@ -1,0 +1,55 @@
+# Base System
+base
+linux
+linux-firmware
+mkinitcpio
+archiso
+
+# Networking
+networkmanager
+iw
+iwd
+
+# Display Server & UI
+wayland
+xorg-xwayland
+plasma-meta
+sddm
+konsole
+dolphin
+kate
+
+# Graphics Drivers (Universal)
+mesa
+lib32-mesa
+vulkan-radeon
+lib32-vulkan-radeon
+vulkan-intel
+lib32-vulkan-intel
+nvidia-dkms
+nvidia-utils
+lib32-nvidia-utils
+
+# Gaming & Performance
+steam
+gamescope
+mangohud
+lib32-mangohud
+gamemode
+lib32-gamemode
+
+# Wine & Third Party
+wine-staging
+winetricks
+lutris
+heroic-games-launcher
+
+# Utilities
+sudo
+nano
+git
+wget
+curl
+unzip
+htop
+neofetch
