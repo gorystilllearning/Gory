@@ -47,7 +47,6 @@ lib32-gamemode
 wine-staging
 winetricks
 lutris
-heroic-games-launcher
 
 # Utilities
 sudo
@@ -57,4 +56,4 @@ wget
 curl
 unzip
 htop
-neofetch
+fastfetch
