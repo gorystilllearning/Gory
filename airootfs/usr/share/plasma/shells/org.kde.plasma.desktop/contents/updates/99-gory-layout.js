@@ -1,7 +1,16 @@
-var panels = panels();
-if (panels.length > 0) {
-    panels[0].location = "top";
-    panels[0].height = 24;
+var myPanels = panels();
+if (myPanels.length > 0) {
+    var p = myPanels[0];
+    p.location = "top";
+    p.height = 24;
+    
+    // Change the launcher icon to a dot (media-record)
+    for (var i = 0; i < p.applets.length; i++) {
+        if (p.applets[i].pluginName === "org.kde.plasma.kickoff") {
+            p.applets[i].currentConfigGroup = ["General"];
+            p.applets[i].writeConfig("icon", "media-record");
+        }
+    }
 }
 
 var dock = new Panel("org.kde.panel");
