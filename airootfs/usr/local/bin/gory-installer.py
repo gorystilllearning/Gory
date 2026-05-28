@@ -23,7 +23,7 @@ class InstallerWindow(QWidget):
         title.setAlignment(Qt.AlignmentFlag.AlignCenter)
         layout.addWidget(title)
 
-        subtitle = QLabel('The Ultimate Hacker & Gaming Experience')
+        subtitle = QLabel('The Ultimate Gaming Experience')
         subtitle.setFont(QFont('Arial', 12))
         subtitle.setAlignment(Qt.AlignmentFlag.AlignCenter)
         layout.addWidget(subtitle)

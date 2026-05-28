@@ -14,21 +14,21 @@ Gory is an open-source, Arch-based Linux distribution optimized for PC gaming. B
   - Wine & ProtonUp-Qt
 - **Third-Party Launchers Support**: Pre-configured scripts to install non-Steam launchers (EA App, Ubisoft Connect, Rockstar Games Launcher, etc.) via Proton.
 
-## ✨ BIG UPDATE: Mac-Gaming UI Overhaul
+## ✨ BIG UPDATE: Premium Gaming UI Overhaul
 
-Gory OS has received a major visual overhaul to provide a premium, Mac-like experience infused with a dark, gaming aesthetic!
-- **Mac-Style Window Controls**: Left-aligned Red, Yellow, and Green buttons.
-- **Mac-Style Dock**: A centered, floating bottom dock for all your favorite applications.
+Gory OS has received a major visual overhaul to provide a premium experience infused with a dark, gaming aesthetic!
+- **Classic Window Controls**: Left-aligned Red, Yellow, and Green buttons.
+- **Floating Dock**: A centered, floating bottom dock for all your favorite applications.
 - **Minimalist Top Panel**: A distraction-free, slim top bar for the clock and system tray.
 - **Tela Circle Green Icons**: Premium, rounded icons with neon green accents.
 - **Breeze Dark Theme**: Fully automated dark mode across the entire system.
 
-## 🚀 How to Test Gory OS on Mac (UTM Tutorial)
+## 🚀 How to Test Gory OS (UTM Tutorial)
 
-If you are using an Apple Silicon Mac (M1/M2/M3/M4) and want to test the Gory OS Live Environment, follow these steps:
+If you are using Apple Silicon (M1/M2/M3/M4) and want to test the Gory OS Live Environment, follow these steps:
 
 1. **Download the ISO**: Go to the **Actions** tab in this repository, click the latest green checkmark build, and download `Gory-ISO` from the Artifacts section.
-2. **Download UTM**: Download and install [UTM for Mac](https://mac.getutm.app/).
+2. **Download UTM**: Download and install [UTM](https://mac.getutm.app/).
 3. **Create VM**: Open UTM, click **"+"** -> **Emulate** -> **Linux**.
 4. **Boot ISO**: In the "Boot ISO Image" section, click **Browse** and select the downloaded Gory ISO.
 5. **Configure Hardware**: 

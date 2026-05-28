@@ -10,7 +10,7 @@ kwriteconfig6 --file kdeglobals --group KDE --key LookAndFeelPackage org.kde.bre
 # Apply Candy Icon Theme
 kwriteconfig6 --file kdeglobals --group Icons --key Theme candy-icons
 
-# Apply Mac-style Window Decorations (McMojave and buttons on left)
+# Apply Premium Window Decorations (McMojave and buttons on left)
 kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key theme McMojave
 kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key ButtonsOnLeft XMA
 kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key ButtonsOnRight ""

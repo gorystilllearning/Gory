@@ -39,7 +39,7 @@ jobs:
           mkdir -p /tmp/archiso-tmp
           mkdir -p /tmp/archiso-out
           
-          # Download and install McMojave Aurorae theme (Mac buttons)
+          # Download and install McMojave Aurorae theme
           mkdir -p /tmp/build-profile/airootfs/usr/share/aurorae/themes/McMojave
           curl -sL https://github.com/vinceliuice/McMojave-kde/archive/refs/heads/master.tar.gz | tar xz -C /tmp/build-profile/airootfs/usr/share/aurorae/themes/McMojave --strip-components=3 McMojave-kde-master/aurorae/McMojave
           
