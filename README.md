@@ -1,24 +1,24 @@
 # Gory
 
-*Gory OS is a passion project co-created by a human developer and an AI assistant. We teamed up to build this from scratch—navigating Linux package dependencies, wrestling with KDE configuration files, fighting the ISO builder, and debating design aesthetics—to create the ultimate gaming OS! 🤖🤝🧑‍💻*
+*Gory OS lahir dari rasa frustrasi yang mendalam. Pernahkah Anda merasa tersesat dalam labirin terminal yang gelap gulita hanya untuk sekadar meng-install sistem operasi Linux? Sang pembuat OS ini pernah. Daripada pusing tujuh keliling membaca dokumentasi Arch yang membingungkan, memecahkan masalah *dependency*, dan mengetik perintah terminal panjang, ia memutuskan untuk bersenang-senang (*just for fun*) dan menciptakan sebuah OS instan! Dibantu oleh Asisten AI, kami merakit OS ini agar siapapun bisa langsung menikmati sistem yang cantik tanpa harus menangis darah saat proses instalasi. 🤖🤝🧑‍💻*
 
-Gory is an open-source, Arch-based Linux distribution optimized for PC gaming. Built on top of the powerful `archiso` tool, this project provides a streamlined gaming experience out-of-the-box, featuring KDE Plasma, Gamescope, and tools to seamlessly play Windows games.
+Gory is an open-source, Arch-based Linux distribution designed for simplicity and fun. Built on top of the powerful `archiso` tool, this project provides a streamlined desktop experience out-of-the-box, featuring KDE Plasma and premium aesthetics.
 
 ## Features
 
 - **Base**: Arch Linux
 - **Desktop Environment**: KDE Plasma (Wayland)
-- **Gaming Tools Pre-installed**: 
+- **Pre-installed Essentials**: 
   - Steam
-  - Gamescope (Micro-compositor)
-  - MangoHud (Performance overlay)
-  - Lutris & Heroic Games Launcher
+  - Gamescope
+  - MangoHud
+  - Lutris & Heroic
   - Wine & ProtonUp-Qt
-- **Third-Party Launchers Support**: Pre-configured scripts to install non-Steam launchers (EA App, Ubisoft Connect, Rockstar Games Launcher, etc.) via Proton.
+- **Third-Party Support**: Pre-configured scripts to easily install popular Windows applications via Proton.
 
-## ✨ BIG UPDATE: Premium Gaming UI Overhaul
+## ✨ BIG UPDATE: Premium UI Overhaul
 
-Gory OS has received a major visual overhaul to provide a premium experience infused with a dark, gaming aesthetic!
+Gory OS has received a major visual overhaul to provide a premium experience infused with a sleek, dark aesthetic!
 - **Classic Window Controls**: Left-aligned Red, Yellow, and Green buttons.
 - **Floating Dock**: A centered, floating bottom dock for all your favorite applications.
 - **Minimalist Top Panel**: A distraction-free, slim top bar for the clock and system tray.
