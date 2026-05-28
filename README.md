@@ -1,5 +1,7 @@
 # Gory
 
+*Gory OS is a passion project co-created by a human developer and an AI assistant. We teamed up to build this from scratch—navigating Linux package dependencies, wrestling with KDE configuration files, fighting the ISO builder, and debating design aesthetics—to create the ultimate gaming OS! 🤖🤝🧑‍💻*
+
 Gory is an open-source, Arch-based Linux distribution optimized for PC gaming. Built on top of the powerful `archiso` tool, this project provides a streamlined gaming experience out-of-the-box, featuring KDE Plasma, Gamescope, and tools to seamlessly play Windows games.
 
 ## Features
