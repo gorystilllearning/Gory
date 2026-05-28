@@ -35,5 +35,5 @@ plasma-apply-wallpaperimage /usr/share/backgrounds/gory-wallpaper.jpg
 rm -f ~/.config/autostart/apply-gory-theme.desktop
 
 # Set fastfetch alias to use custom logo
-echo 'fastfetch --logo /usr/share/pixmaps/gory-installer-logo.png --logo-width 30' >> ~/.bashrc
-echo 'fastfetch --logo /usr/share/pixmaps/gory-installer-logo.png --logo-width 30' >> ~/.zshrc
+echo 'fastfetch --logo /usr/share/pixmaps/gory-installer-logo.png --logo-type chafa --logo-width 35' >> ~/.bashrc
+echo 'fastfetch --logo /usr/share/pixmaps/gory-installer-logo.png --logo-type chafa --logo-width 35' >> ~/.zshrc
