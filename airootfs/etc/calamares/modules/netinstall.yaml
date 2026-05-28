@@ -1,0 +1,33 @@
+---
+- name: "Gaming"
+  description: "Gaming launchers"
+  hidden: false
+  selected: false
+  critical: false
+  packages:
+    - steam
+    - lutris
+
+- name: "Social"
+  description: "Communication apps"
+  hidden: false
+  selected: false
+  critical: false
+  packages:
+    - discord
+
+- name: "Media"
+  description: "Media and music players"
+  hidden: false
+  selected: false
+  critical: false
+  packages:
+    - spotify-launcher
+
+- name: "Office"
+  description: "Office suite"
+  hidden: false
+  selected: false
+  critical: false
+  packages:
+    - libreoffice-fresh

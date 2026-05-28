@@ -1,0 +1,30 @@
+---
+componentName:   gory
+welcomeStyleCalamares: true
+welcomeExpandingLogo: true
+windowExpanding: normal
+windowSize: 800px,520px
+windowPlacement: center
+sidebar: widget
+navigation: widget
+strings:
+    productName:         Gory OS
+    shortProductName:    Gory
+    version:             2026.05
+    shortVersion:        2026
+    versionedName:       Gory OS 2026.05
+    shortVersionedName:  Gory 2026
+    bootloaderEntryName: Gory OS
+    productUrl:          https://github.com/gorystilllearning/Gory
+    supportUrl:          https://github.com/gorystilllearning/Gory
+    knownIssuesUrl:      https://github.com/gorystilllearning/Gory
+    releaseNotesUrl:     https://github.com/gorystilllearning/Gory
+images:
+    productLogo:         "/usr/share/pixmaps/gory-installer-logo.png"
+    productIcon:         "/usr/share/pixmaps/gory-installer-logo.png"
+    productWelcome:      "/usr/share/pixmaps/gory-installer-logo.png"
+style:
+    SidebarBackground:    "#2c3133"
+    SidebarText:          "#FFFFFF"
+    SidebarTextCurrent:    "#292F34"
+    SidebarBackgroundCurrent: "#D35400"

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Install Gory OS
+Exec=sudo -E calamares
+Icon=/usr/share/pixmaps/gory-installer-logo.png
+Terminal=false
+Categories=System;
