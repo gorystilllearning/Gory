@@ -1,25 +1,23 @@
 var myPanels = panels();
-if (myPanels.length > 0) {
-    var p = myPanels[0];
-    p.location = "top";
-    p.height = 24;
-    
-    // Modify applets on the top panel
-    for (var i = p.applets.length - 1; i >= 0; i--) {
-        var plugin = p.applets[i].pluginName;
-        // Change the launcher icon to a dot
-        if (plugin === "org.kde.plasma.kickoff") {
-            p.applets[i].currentConfigGroup = ["General"];
-            p.applets[i].writeConfig("icon", "media-record");
-        }
-        // Remove task managers from top panel
-        if (plugin === "org.kde.plasma.icontasks" || plugin === "org.kde.plasma.taskmanager" || plugin === "org.kde.plasma.pager") {
-            p.applets[i].remove();
-        }
+for (var i = 0; i < myPanels.length; i++) {
+    myPanels[i].remove();
+}
+
+var topPanel = new Panel("org.kde.panel");
+topPanel.location = "top";
+topPanel.height = 24;
+topPanel.addWidget("org.kde.plasma.kickoff");
+topPanel.addWidget("org.kde.plasma.appmenu");
+topPanel.addWidget("org.kde.plasma.marginsseparator");
+topPanel.addWidget("org.kde.plasma.systemtray");
+topPanel.addWidget("org.kde.plasma.digitalclock");
+
+// configure kickoff to have the media-record icon
+for (var i = 0; i < topPanel.applets.length; i++) {
+    if (topPanel.applets[i].pluginName === "org.kde.plasma.kickoff") {
+        topPanel.applets[i].currentConfigGroup = ["General"];
+        topPanel.applets[i].writeConfig("icon", "media-record");
     }
-    
-    // Add global menu next to the kickoff (index 1)
-    p.addWidget("org.kde.plasma.appmenu");
 }
 
 var dock = new Panel("org.kde.panel");
