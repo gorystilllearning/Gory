@@ -45,3 +45,7 @@ for (i=0; i<Desktops.length; i++) {
 
 # Remove the autostart desktop file so it only runs on first boot
 rm -f ~/.config/autostart/apply-gory-theme.desktop
+
+# Set up fastfetch auto-start for this user
+echo 'fastfetch --logo /usr/share/pixmaps/gory-logo.jpg --logo-width 30' >> ~/.bashrc
+echo 'fastfetch --logo /usr/share/pixmaps/gory-logo.jpg --logo-width 30' >> ~/.zshrc
