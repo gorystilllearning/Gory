@@ -7,6 +7,13 @@ sleep 5
 kwriteconfig6 --file kdeglobals --group General --key ColorScheme BreezeDark
 kwriteconfig6 --file kdeglobals --group KDE --key LookAndFeelPackage org.kde.breezedark.desktop
 
+# Apply Kvantum theme
+kwriteconfig6 --file kdeglobals --group KDE --key widgetStyle kvantum
+
+# Copy Custom Calamares Branding
+sudo cp -a /opt/gory-branding/etc/calamares/* /etc/calamares/ 2>/dev/null || true
+sudo cp -a /opt/gory-branding/usr/share/calamares/* /usr/share/calamares/ 2>/dev/null || true
+
 # Apply Candy Icon Theme
 kwriteconfig6 --file kdeglobals --group Icons --key Theme candy-icons
 
