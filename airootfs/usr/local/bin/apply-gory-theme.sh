@@ -35,5 +35,8 @@ plasma-apply-wallpaperimage /usr/share/backgrounds/gory-wallpaper.jpg
 rm -f ~/.config/autostart/apply-gory-theme.desktop
 
 # Set fastfetch alias to use custom logo
+# Set fastfetch alias and Starship prompt
 echo 'fastfetch --logo /usr/share/pixmaps/gory-installer-logo.png --logo-type chafa --logo-width 35' >> ~/.bashrc
+echo 'eval "$(starship init bash)"' >> ~/.bashrc
 echo 'fastfetch --logo /usr/share/pixmaps/gory-installer-logo.png --logo-type chafa --logo-width 35' >> ~/.zshrc
+echo 'eval "$(starship init zsh)"' >> ~/.zshrc
