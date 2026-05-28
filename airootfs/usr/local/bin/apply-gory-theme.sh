@@ -18,8 +18,8 @@ sudo cp -a /opt/gory-branding/usr/share/calamares/* /usr/share/calamares/ 2>/dev
 kwriteconfig6 --file kdeglobals --group Icons --key Theme candy-icons
 
 # Apply Premium Window Decorations (McMojave and buttons on left)
-kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key theme McMojave
-kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key ButtonsOnLeft XMA
+kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key theme __aurorae__svg__McMojave
+kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key ButtonsOnLeft XIA
 kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key ButtonsOnRight ""
 
 # Enable Wobbly Windows effect
