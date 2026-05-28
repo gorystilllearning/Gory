@@ -10,8 +10,8 @@ kwriteconfig6 --file kdeglobals --group KDE --key LookAndFeelPackage org.kde.bre
 # Apply Tela Circle Green Icon Theme
 kwriteconfig6 --file kdeglobals --group Icons --key Theme Tela-circle-green
 
-# Apply Mac-style Window Decorations (WhiteSur-dark and buttons on left)
-kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key theme WhiteSur-dark
+# Apply Mac-style Window Decorations (McMojave and buttons on left)
+kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key theme McMojave
 kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key ButtonsOnLeft XMA
 kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key ButtonsOnRight ""
 
