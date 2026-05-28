@@ -1,6 +1,6 @@
 # Gory
 
-*Gory OS lahir dari rasa frustrasi yang mendalam. Pernahkah Anda merasa tersesat dalam labirin terminal yang gelap gulita hanya untuk sekadar meng-install sistem operasi Linux? Sang pembuat OS ini pernah. Daripada pusing tujuh keliling membaca dokumentasi Arch yang membingungkan, memecahkan masalah *dependency*, dan mengetik perintah terminal panjang, ia memutuskan untuk bersenang-senang (*just for fun*) dan menciptakan sebuah OS instan! Dibantu oleh Asisten AI, kami merakit OS ini agar siapapun bisa langsung menikmati sistem yang cantik tanpa harus menangis darah saat proses instalasi. 🤖🤝🧑‍💻*
+*Gory OS is a personal passion project built just for fun. It was created simply because installing and configuring a Linux system from scratch can be tedious. To save time and avoid the hassle of setting everything up manually, the creator built this automated, ready-to-use distribution with the help of an AI assistant. Now, getting a beautiful and fully configured desktop is just one click away! 🤖🤝🧑‍💻*
 
 Gory is an open-source, Arch-based Linux distribution designed for simplicity and fun. Built on top of the powerful `archiso` tool, this project provides a streamlined desktop experience out-of-the-box, featuring KDE Plasma and premium aesthetics.
 
