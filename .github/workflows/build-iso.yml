@@ -39,6 +39,10 @@ jobs:
           mkdir -p /tmp/archiso-tmp
           mkdir -p /tmp/archiso-out
           
+          # Download and install WhiteSur Aurorae theme (Mac buttons)
+          mkdir -p /tmp/build-profile/airootfs/usr/share/aurorae/themes
+          curl -sL https://github.com/vinceliuice/WhiteSur-kde/archive/refs/heads/master.tar.gz | tar xz -C /tmp/build-profile/airootfs/usr/share/aurorae/themes --strip-components=2 WhiteSur-kde-master/aurorae/WhiteSur-dark
+          
           # Run mkarchiso using the mixed profile
           mkarchiso -v -w /tmp/archiso-tmp -o /tmp/archiso-out /tmp/build-profile
 

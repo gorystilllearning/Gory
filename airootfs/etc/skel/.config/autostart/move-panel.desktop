@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Configure KDE Panel and Wallpaper
-Exec=sh -c 'sleep 3 && dbus-send --session --dest=org.kde.plasmashell --type=method_call /PlasmaShell org.kde.PlasmaShell.evaluateScript string:"var panels = panels(); if (panels.length > 0) { panels[0].location = \"top\"; panels[0].height = 28; }; var Desktops = desktops(); for (i=0;i<Desktops.length;i++) { d = Desktops[i]; d.wallpaperPlugin = \"org.kde.image\"; d.currentConfigGroup = Array(\"Wallpaper\", \"org.kde.image\", \"General\"); d.writeConfig(\"Image\", \"file:///usr/share/backgrounds/gory-wallpaper.jpg\"); }" && rm -f ~/.config/autostart/move-panel.desktop'
-Hidden=false
-NoDisplay=true
-X-GNOME-Autostart-enabled=true
-X-KDE-autostart-after=panel

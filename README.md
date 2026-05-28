@@ -14,6 +14,28 @@ Gory is an open-source, Arch-based Linux distribution optimized for PC gaming. B
   - Wine & ProtonUp-Qt
 - **Third-Party Launchers Support**: Pre-configured scripts to install non-Steam launchers (EA App, Ubisoft Connect, Rockstar Games Launcher, etc.) via Proton.
 
+## ✨ BIG UPDATE: Mac-Gaming UI Overhaul
+
+Gory OS has received a major visual overhaul to provide a premium, Mac-like experience infused with a dark, gaming aesthetic!
+- **Mac-Style Window Controls**: Left-aligned Red, Yellow, and Green buttons.
+- **Mac-Style Dock**: A centered, floating bottom dock for all your favorite applications.
+- **Minimalist Top Panel**: A distraction-free, slim top bar for the clock and system tray.
+- **Tela Circle Green Icons**: Premium, rounded icons with neon green accents.
+- **Breeze Dark Theme**: Fully automated dark mode across the entire system.
+
+## 🚀 How to Test Gory OS on Mac (UTM Tutorial)
+
+If you are using an Apple Silicon Mac (M1/M2/M3/M4) and want to test the Gory OS Live Environment, follow these steps:
+
+1. **Download the ISO**: Go to the **Actions** tab in this repository, click the latest green checkmark build, and download `Gory-ISO` from the Artifacts section.
+2. **Download UTM**: Download and install [UTM for Mac](https://mac.getutm.app/).
+3. **Create VM**: Open UTM, click **"+"** -> **Emulate** -> **Linux**.
+4. **Boot ISO**: In the "Boot ISO Image" section, click **Browse** and select the downloaded Gory ISO.
+5. **Configure Hardware**: 
+   - Under **Architecture**, you MUST select `x86_64` (e.g. `Intel ICH9 based PC (2009, x86_64)`).
+   - Set **Memory** to at least `4096` MB.
+   - Set **CPU Cores** to `4` or `6`.
+6. **Start**: Save the VM and click the Play button to boot into Gory OS!
 ## Building the ISO
 
 This repository uses GitHub Actions to automatically build the ISO file. 
