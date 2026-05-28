@@ -58,4 +58,17 @@ jobs:
           path: /tmp/archiso-out/*.iso
           retention-days: 5
 
-
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        if: github.ref == 'refs/heads/main'
+        with:
+          files: /tmp/archiso-out/*.iso
+          tag_name: build-${{ github.run_number }}
+          name: Gory OS Build #${{ github.run_number }}
+          body: |
+            ## Gory OS - The Ultimate Hacker & Gaming Experience
+            Download the raw ISO file below (no need to extract from zip).
+            
+            This is an automated build.
+          draft: false
+          prerelease: false
