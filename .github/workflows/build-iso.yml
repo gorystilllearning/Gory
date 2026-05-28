@@ -43,6 +43,11 @@ jobs:
           mkdir -p /tmp/build-profile/airootfs/usr/share/aurorae/themes/McMojave
           curl -sL https://github.com/vinceliuice/McMojave-kde/archive/refs/heads/master.tar.gz | tar xz -C /tmp/build-profile/airootfs/usr/share/aurorae/themes/McMojave --strip-components=3 McMojave-kde-master/aurorae/McMojave
           
+          # Download and install Candy Icons
+          mkdir -p /tmp/build-profile/airootfs/usr/share/icons
+          curl -sL https://github.com/EliverLara/candy-icons/archive/refs/heads/master.tar.gz | tar xz -C /tmp/build-profile/airootfs/usr/share/icons
+          mv /tmp/build-profile/airootfs/usr/share/icons/candy-icons-master /tmp/build-profile/airootfs/usr/share/icons/candy-icons
+          
           # Run mkarchiso using the mixed profile
           mkarchiso -v -w /tmp/archiso-tmp -o /tmp/archiso-out /tmp/build-profile
 

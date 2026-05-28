@@ -7,8 +7,8 @@ sleep 5
 kwriteconfig6 --file kdeglobals --group General --key ColorScheme BreezeDark
 kwriteconfig6 --file kdeglobals --group KDE --key LookAndFeelPackage org.kde.breezedark.desktop
 
-# Apply Tela Circle Green Icon Theme
-kwriteconfig6 --file kdeglobals --group Icons --key Theme Tela-circle-green
+# Apply Candy Icon Theme
+kwriteconfig6 --file kdeglobals --group Icons --key Theme candy-icons
 
 # Apply Mac-style Window Decorations (McMojave and buttons on left)
 kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key theme McMojave
