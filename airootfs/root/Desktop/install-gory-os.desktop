@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Install Gory OS
-Exec=/usr/local/bin/gory-installer.py
-Icon=/usr/share/pixmaps/gory-installer-logo.png
-Terminal=false
-Categories=System;
