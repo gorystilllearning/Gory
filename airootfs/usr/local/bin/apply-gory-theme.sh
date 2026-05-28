@@ -15,6 +15,9 @@ kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key theme McMojave
 kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key ButtonsOnLeft XMA
 kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key ButtonsOnRight ""
 
+# Enable Wobbly Windows effect
+kwriteconfig6 --file kwinrc --group Plugins --key wobblywindowsEnabled true
+
 # Reconfigure KWin to apply window decoration changes immediately
 qdbus org.kde.KWin /KWin reconfigure
 
