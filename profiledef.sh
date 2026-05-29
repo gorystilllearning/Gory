@@ -25,4 +25,6 @@ file_permissions=(
   ["/usr/local/bin/gory-installer.py"]="0:0:755"
   ["/root/Desktop/install-gory-os.desktop"]="0:0:755"
   ["/etc/skel/Desktop/install-gory-os.desktop"]="0:0:755"
+  ["/etc/profile.d/gory.sh"]="0:0:755"
+  ["/etc/zsh/zshrc.local"]="0:0:755"
 )

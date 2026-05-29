@@ -1,7 +1,7 @@
 [org.kde.kdecoration2]
+theme=__aurorae__svg__McMojave
 ButtonsOnLeft=XIA
 ButtonsOnRight=
-theme=__aurorae__svg__McMojave
 
 [Plugins]
 wobblywindowsEnabled=true

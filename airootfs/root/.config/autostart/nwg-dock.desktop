@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Gory OS Dock
+Comment=Wayland compatible dock
+Exec=nwg-dock -d
+Terminal=false
+Type=Application
+Categories=Utility;
+NoDisplay=true
