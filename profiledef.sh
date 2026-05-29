@@ -23,4 +23,6 @@ file_permissions=(
   ["/usr/local/bin/livecd-sound"]="0:0:755"
   ["/usr/local/bin/apply-gory-theme.sh"]="0:0:755"
   ["/usr/local/bin/gory-installer.py"]="0:0:755"
+  ["/root/Desktop/install-gory-os.desktop"]="0:0:755"
+  ["/etc/skel/Desktop/install-gory-os.desktop"]="0:0:755"
 )

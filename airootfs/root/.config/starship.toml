@@ -1,0 +1,27 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[╭─](#a3aed2) $os$directory$git_branch
+[╰─](#a3aed2)$character
+"""
+
+[os]
+disabled = false
+format = "[$symbol]($style) "
+style = "bold green"
+
+[os.symbols]
+Arch = "󰣇"
+
+[directory]
+style = "bold cyan"
+read_only = " "
+read_only_style = "red"
+
+[git_branch]
+symbol = " "
+style = "bold purple"
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"

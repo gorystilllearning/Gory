@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Install Gory OS
+Comment=Install Gory OS to your computer
+Exec=sudo calamares
+Icon=calamares
+Terminal=false
+Categories=System;

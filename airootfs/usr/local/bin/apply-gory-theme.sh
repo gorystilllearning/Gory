@@ -28,15 +28,14 @@ kwriteconfig6 --file kwinrc --group Plugins --key wobblywindowsEnabled true
 # Reconfigure KWin to apply window decoration changes immediately
 qdbus org.kde.KWin /KWin reconfigure
 
-# Set wallpaper via Plasma 6 CLI tool
-plasma-apply-wallpaperimage /usr/share/backgrounds/gory-wallpaper.jpg
+# Set wallpaper via Plasma 6 CLI tool with retry loop
+for i in {1..10}; do
+    if plasma-apply-wallpaperimage /usr/share/backgrounds/gory-wallpaper.jpg; then
+        break
+    fi
+    sleep 2
+done
 
 # Remove the autostart desktop file so it only runs on first boot
 rm -f ~/.config/autostart/apply-gory-theme.desktop
 
-# Set fastfetch alias to use custom logo
-# Set fastfetch alias and Starship prompt
-echo 'fastfetch --logo /usr/share/pixmaps/gory-installer-logo.png --logo-type chafa --logo-width 35' >> ~/.bashrc
-echo 'eval "$(starship init bash)"' >> ~/.bashrc
-echo 'fastfetch --logo /usr/share/pixmaps/gory-installer-logo.png --logo-type chafa --logo-width 35' >> ~/.zshrc
-echo 'eval "$(starship init zsh)"' >> ~/.zshrc
