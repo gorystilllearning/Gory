@@ -1,0 +1,9 @@
+[General]
+ColorScheme=BreezeDark
+
+[Icons]
+Theme=candy-icons
+
+[KDE]
+LookAndFeelPackage=org.kde.breezedark.desktop
+widgetStyle=kvantum
