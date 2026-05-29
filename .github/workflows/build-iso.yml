@@ -12,48 +12,48 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: archlinux:base-devel
-      options: --privileged
 
     steps:
+      - name: Free Disk Space
+        run: |
+          sudo rm -rf /usr/local/lib/android
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf /opt/ghc
+          sudo rm -rf /usr/local/.ghcup
+          sudo apt-get clean
+          df -h
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install dependencies
+      - name: Build ISO using Docker
         run: |
-          pacman -Syu --noconfirm
-          pacman -S --noconfirm archiso syslinux mtools dosfstools edk2-ovmf grub
+          docker run --rm --privileged -v ${{ github.workspace }}:/workspace -w /workspace archlinux:base-devel bash -c "
+            pacman -Syu --noconfirm
+            pacman -S --noconfirm archiso syslinux mtools dosfstools edk2-ovmf grub
 
-      - name: Build ISO
-        run: |
-          # Copy base releng profile to a build directory
-          cp -r /usr/share/archiso/configs/releng /tmp/build-profile
-          
-          # Overwrite with our custom files
-          cp profiledef.sh /tmp/build-profile/
-          cp pacman.conf /tmp/build-profile/
-          cat packages.x86_64 >> /tmp/build-profile/packages.x86_64
-          cp -r airootfs/* /tmp/build-profile/airootfs/
-          
-          mkdir -p /tmp/archiso-tmp
-          mkdir -p /tmp/archiso-out
-          
-          # Download and install McMojave Aurorae theme
-          mkdir -p /tmp/build-profile/airootfs/usr/share/aurorae/themes/McMojave
-          curl -sL https://github.com/vinceliuice/McMojave-kde/archive/refs/heads/master.tar.gz | tar xz -C /tmp/build-profile/airootfs/usr/share/aurorae/themes/McMojave --strip-components=3 McMojave-kde-master/aurorae/McMojave
-          
-          # Download and install Candy Icons
-          mkdir -p /tmp/build-profile/airootfs/usr/share/icons
-          curl -sL https://github.com/EliverLara/candy-icons/archive/refs/heads/master.tar.gz | tar xz -C /tmp/build-profile/airootfs/usr/share/icons
-          mv /tmp/build-profile/airootfs/usr/share/icons/candy-icons-master /tmp/build-profile/airootfs/usr/share/icons/candy-icons
-          
-          # Run mkarchiso using the mixed profile
-          mkarchiso -v -w /tmp/archiso-tmp -o /tmp/archiso-out /tmp/build-profile
+            cp -r /usr/share/archiso/configs/releng /tmp/build-profile
+            cp profiledef.sh /tmp/build-profile/
+            cp pacman.conf /tmp/build-profile/
+            cat packages.x86_64 >> /tmp/build-profile/packages.x86_64
+            cp -r airootfs/* /tmp/build-profile/airootfs/
+
+            mkdir -p /tmp/archiso-tmp
+            mkdir -p /workspace/archiso-out
+
+            mkdir -p /tmp/build-profile/airootfs/usr/share/aurorae/themes/McMojave
+            curl -sL https://github.com/vinceliuice/McMojave-kde/archive/refs/heads/master.tar.gz | tar xz -C /tmp/build-profile/airootfs/usr/share/aurorae/themes/McMojave --strip-components=3 McMojave-kde-master/aurorae/McMojave
+
+            mkdir -p /tmp/build-profile/airootfs/usr/share/icons
+            curl -sL https://github.com/EliverLara/candy-icons/archive/refs/heads/master.tar.gz | tar xz -C /tmp/build-profile/airootfs/usr/share/icons
+            mv /tmp/build-profile/airootfs/usr/share/icons/candy-icons-master /tmp/build-profile/airootfs/usr/share/icons/candy-icons
+
+            mkarchiso -v -w /tmp/archiso-tmp -o /workspace/archiso-out /tmp/build-profile
+          "
 
       - name: Upload ISO as Artifact
         uses: actions/upload-artifact@v4
         with:
           name: Gory-ISO
-          path: /tmp/archiso-out/*.iso
+          path: archiso-out/*.iso
           retention-days: 5
