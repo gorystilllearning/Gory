@@ -23,6 +23,8 @@ sddm
 konsole
 dolphin
 kate
+xdg-desktop-portal
+xdg-desktop-portal-kde
 
 # Graphics Drivers (Universal)
 mesa
@@ -56,9 +58,18 @@ wget
 curl
 unzip
 htop
+zsh
+efibootmgr
+os-prober
+bluez
+bluez-utils
+pipewire
+pipewire-pulse
+pipewire-jack
+wireplumber
 fastfetch
 tela-circle-icon-theme-green
-papirus-icon-theme
+candy-icons
 calamares
 kpmcore
 ckbcomp
@@ -67,7 +78,6 @@ discover
 packagekit-qt6
 firefox
 vlc
-kate
 ark
 gwenview
 plasma-systemmonitor
