@@ -9,7 +9,7 @@ topPanel.height = 24;
 
 var kickoff = topPanel.addWidget("org.kde.plasma.kickoff");
 kickoff.currentConfigGroup = ["General"];
-kickoff.writeConfig("icon", "radiobutton-unchecked"); // pure circle icon
+kickoff.writeConfig("icon", "radio-unchecked"); // pure circle icon
 
 topPanel.addWidget("org.kde.plasma.appmenu");
 topPanel.addWidget("org.kde.plasma.panelspacer");
